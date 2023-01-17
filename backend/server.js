@@ -20,6 +20,6 @@ app.use((req, res, next) => {
 //routes
 app.use("/api/workouts",workoutRoutes);
 
-app.listen(9000, () =>{
+app.listen(4000, () =>{
     console.log('Server started')
 })
