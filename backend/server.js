@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const workoutRoutes = require("./routes/workouts");
+const userRoutes = require("./routes/user");
 require("dotenv").config();
 const url = "mongodb://127.0.0.1/MEANapp";
 
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
 });
 //routes
 app.use("/api/workouts", workoutRoutes);
+app.use("/api/user", userRoutes);
 
 app.listen(4000, () => {
   console.log("Server started");
